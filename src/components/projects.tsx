@@ -1,5 +1,5 @@
 import { useState} from "react";
-import ProjectModal from "./projectModal";
+import ProjectModal from "./ProjectModal";
 
 interface Project {
   id: number;
