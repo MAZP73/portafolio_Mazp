@@ -143,9 +143,14 @@ const Home = () => {
                             Ver mi trabajo
                         </button>
 
-                        <button className="rounded-lg border border-gray-300 px-6 py-3 text-sm font-medium text-black transition hover:bg-gray-100">
+                        <a
+                            href="/CV.pdf"
+                            download="CV.pdf"
+                            className="rounded-lg border border-gray-300 px-6 py-3 text-sm font-medium text-black transition hover:bg-gray-100 text-center"
+                        >
                             Descargar CV
-                        </button>
+                        </a>
+
                     </div>
 
                     <div
