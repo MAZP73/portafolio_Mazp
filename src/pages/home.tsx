@@ -144,7 +144,7 @@ const Home = () => {
                         </button>
 
                         <a
-                            href="/CV.pdf"
+                            href="/CV_Miguel_Zambrano.pdf"
                             download="CV.pdf"
                             className="rounded-lg border border-gray-300 px-6 py-3 text-sm font-medium text-black transition hover:bg-gray-100 text-center"
                         >
