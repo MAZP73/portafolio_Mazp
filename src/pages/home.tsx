@@ -145,7 +145,7 @@ const Home = () => {
 
                         <a
                             href="/CV_Miguel_Zambrano.pdf"
-                            download="CV.pdf"
+                            download="CV_Miguel_Zambrano.pdf"
                             className="rounded-lg border border-gray-300 px-6 py-3 text-sm font-medium text-black transition hover:bg-gray-100 text-center"
                         >
                             Descargar CV
