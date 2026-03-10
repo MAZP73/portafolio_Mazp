@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState } from "react";
 import ProjectModal from "./ProjectModal";
 
 interface Project {
@@ -75,6 +75,60 @@ const PROJECTS: Project[] = [
     link: "https://www.singulartdiseno.com/",
     date: "2025-12-20",
   },
+  {
+    id: 6,
+    title: "Asistente de Desarrollo-freelance · Duzam Ingeniería S.A.S",
+    category: "Desarrollo",
+    image: "/projects/presupuesto.png",
+    description:
+      "Me desempeñé en la corrección y resolución de bugs dentro de un software de presupuestos desarrollado bajo una arquitectura monolítica en Django. Implementé la comunicación entre el frontend y el backend mediante JavaScript y AJAX, garantizando la correcta interacción con las vistas y modelos definidos en el framework. La lógica de negocio se gestionaba directamente en las views y modelos de Django, mientras que la interfaz de usuario se construía a través del sistema de templates, asegurando una integración coherente entre las capas de la aplicación.Debido a que se trata de un software privado de la empresa, no es posible compartir detalles técnicos adicionales sobre su funcionamiento interno o arquitectura específica. Sin embargo, las referencias y validación de la experiencia pueden solicitarse directamente con la empresa Duzam.",
+    technologies: [
+      "Python",
+      "Django",
+      "Html",
+      "Css",
+      "JavaScript",
+      "MySQL",
+      "Bootstrap",
+    ],
+    link: "https://www.duzam.com.co/",
+    date: "2024-12-20",
+  },
+    {
+    id: 6,
+    title: "Desarrollo Marketplace de productos ambientales Frontend",
+    category: "Desarrollo",
+    image: "/projects/market.png",
+    description:
+      "Desarrollo de una plataforma tipo marketplace orientada a la gestión y visualización de productos dentro de un entorno web. El proyecto implementa una arquitectura que separa la lógica de negocio, la gestión de datos y la interfaz de usuario, permitiendo la administración y consulta de productos por parte de los usuarios. Se enfoca en la construcción de funcionalidades básicas de comercio digital, organización modular del código y buenas prácticas de desarrollo para facilitar el mantenimiento y la escalabilidad del sistema.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "gSAP",
+      "Tailwind CSS",
+      "Api REST",
+      "Axios",
+      "Supabase",
+    ],
+    link: "https://github.com/MAZP73/Marketplace_enviromet.git",
+    date: "2025-12-20",
+  },
+      {
+    id: 7,
+    title: "Desarrollo Marketplace de productos ambientales Auth Backend",
+    category: "Desarrollo",
+    image: "/projects/market.png",
+    description:
+      "Desarrollo de un microservicio de autenticación para una plataforma marketplace utilizando Node.js y Express. El servicio gestiona el registro, autenticación y autorización de usuarios mediante una API REST segura.Se implementa autenticación basada en JWT (JSON Web Tokens) para proteger los endpoints y permitir que otros servicios del sistema validen la identidad de los usuarios dentro de una arquitectura de microservicios. El sistema incluye validación de datos, manejo de credenciales seguras y organización modular del backend.",
+    technologies: [
+      "Node.js",
+      "Express",
+      "Api REST",
+      "JWT",
+    ],
+    link: "https://github.com/MAZP73/Marketplace_Auth_Service.git",
+    date: "2025-12-20",
+  },
 ];
 
 const ITEMS_PER_PAGE = 6;
@@ -83,7 +137,7 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [page, setPage] = useState(1);
 
-  
+
 
   const sortedProjects = [...PROJECTS].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
@@ -156,10 +210,9 @@ const Projects = () => {
                 key={i}
                 onClick={() => setPage(i + 1)}
                 className={`h-10 w-10 rounded-full text-sm font-medium transition
-                  ${
-                    page === i + 1
-                      ? "bg-black text-white"
-                      : "bg-neutral-200 text-neutral-700 hover:bg-neutral-300"
+                  ${page === i + 1
+                    ? "bg-black text-white"
+                    : "bg-neutral-200 text-neutral-700 hover:bg-neutral-300"
                   }`}
               >
                 {i + 1}
